@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { UserController } from './app.controller';
-import { AppService } from './app.service';
+import { UserService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
@@ -19,6 +19,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     }),
   ],
   controllers: [UserController],
-  providers: [AppService],
+  providers: [UserService],
 })
 export class AppModule {}
