@@ -18,6 +18,10 @@ export class GatewayController {
   USER_API_URL = `http://localhost:3001/users`;
   PRODUCT_API_URL = `http://localhost:3002/products`;
 
+  @Get('test')
+  getHello() {
+    return 'HI there';
+  }
   @Get('users')
   async getUsers() {
     try {
@@ -45,6 +49,7 @@ export class GatewayController {
   @Post('users')
   async createUser(@Body() userData: any) {
     try {
+      console.log('-----------------');
       const response = await lastValueFrom(
         this.httpService.post(this.USER_API_URL, userData),
       );
