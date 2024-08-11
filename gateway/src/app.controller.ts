@@ -16,7 +16,7 @@ export class GatewayController {
   constructor(private readonly httpService: HttpService) {}
 
   USER_API_URL = `http://localhost:3001/users`;
-  PRODUCT_API_URL = `http://localhost:3001/products`;
+  PRODUCT_API_URL = `http://localhost:3002/products`;
 
   @Get('users')
   async getUsers() {
