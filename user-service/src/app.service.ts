@@ -11,7 +11,6 @@ import { UpdateUserDto } from './dto/update-user.dto';
 export class UserService {
   constructor(
     @InjectRepository(User) private readonly userRepo: Repository<User>,
-    private readonly configService: ConfigService,
   ) {}
 
   async createUser(createUserDto: CreateUserDto) {
