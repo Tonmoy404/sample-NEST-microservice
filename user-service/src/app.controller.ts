@@ -17,6 +17,11 @@ import { UpdateUserDto } from './dto/update-user.dto';
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
+  @Get('test')
+  getHello() {
+    return 'From user service --> 3001';
+  }
+
   @Get()
   findAllUser() {
     return this.userService.findAllUser();

@@ -22,6 +22,7 @@ export class GatewayController {
   getHello() {
     return 'HI there';
   }
+
   @Get('users')
   async getUsers() {
     try {
